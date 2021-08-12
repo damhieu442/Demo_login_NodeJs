@@ -21,6 +21,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 // Express body parser
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // Express session
 app.use(session({
