@@ -26,9 +26,8 @@ app.use(express.json());
 // Express session
 app.use(session({
     secret: 'keyboard cat',
-    resave: true,
-    saveUninitialized: true,
-    cookie: { secure: true }
+    resave: false,
+    saveUninitialized: false,
 }));
 
 // Passport middleware
