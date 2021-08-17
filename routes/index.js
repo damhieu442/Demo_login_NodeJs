@@ -6,7 +6,7 @@ const dashboard = require('./dashboard');
 const { checkAuthenticated, checkNotAuthenticated } = require('../config/auth.js');
 
 function route(app) {
-	app.use('/dashboard', dashboard);
+	app.use('/dashboard',checkAuthenticated, dashboard);
 	app.use('/logout', logout);
 	app.use('/login',  login);
 	app.use('/register', register);
